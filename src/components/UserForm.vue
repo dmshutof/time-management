@@ -155,6 +155,10 @@
         grid-template-columns: repeat(auto-fill, 219px);
         grid-row-gap: 40px;
         grid-column-gap: 20px;
+        @media (max-width: 530px) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+        }
     }
 
     .form_buttons {

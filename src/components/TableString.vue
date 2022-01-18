@@ -37,6 +37,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 530px) {
+            display: grid;
+            grid-gap: 10px;
+        }
 
         .user {
             display: flex;
@@ -63,14 +67,16 @@
                 color: #ffffff;
                 font-weight: bold;
                 font-size: 10px;
-
+                flex-shrink: 0;
             }
         }
 
         .edit_buttons {
-            opacity: 0;
             display: flex;
             align-items: center;
+            @media (min-width: 981px) {
+                opacity: 0;
+            }
 
             * {
                 margin-left: 10px;

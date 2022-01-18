@@ -1,5 +1,8 @@
 <template>
-    <div class="hit-the-floor">404</div>
+    <div class="wrap">
+        <div class="hit-the-floor">404</div>
+        <router-link exact to="/">На главную</router-link>
+    </div>
 </template>
 
 <script>
@@ -8,17 +11,34 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    .wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        a {
+            font-size: 1vw;
+            font-weight: bold;
+            margin-top: 50px;
+            display: inline-block;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+
     .hit-the-floor {
         animation: change_colors 6s infinite;
         color: white;
         font-size: 10vw;
         font-weight: bold;
-        text-shadow:
-                0 .005em 0 rgba(0, 0, 0, .2),
-                0 .005em 0 currentColor,
-
-                0 .01em 0 rgba(0, 0, 0, .25),
+        text-shadow: 0 .005em 0 rgba(0, 0, 0, .2),
+        0 .005em 0 currentColor,
+        0 .01em 0 rgba(0, 0, 0, .25),
                 0 .01em 0 currentColor,
 
                 0 .015em 0 rgba(0, 0, 0, .3),

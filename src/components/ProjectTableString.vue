@@ -1,9 +1,21 @@
 <template>
     <div class="table_body__item table_columns">
-        <p>{{project.description}}</p>
-        <p>{{new Date(project.date_start).toLocaleString("ru",dateFormatOptions)}}</p>
-        <p>{{new Date(project.date_end).toLocaleString("ru", dateFormatOptions)}}</p>
-        <p>{{ project.time}}</p>
+        <div>
+            <p class="only_mobile">Описание</p>
+            <p>{{project.description}}</p>
+        </div>
+        <div>
+            <p class="only_mobile">Дата начала</p>
+            <p>{{new Date(project.date_start).toLocaleString("ru",dateFormatOptions)}}</p>
+        </div>
+        <div>
+            <p class="only_mobile">Дата окончания</p>
+            <p>{{new Date(project.date_end).toLocaleString("ru", dateFormatOptions)}}</p>
+        </div>
+        <div>
+            <p class="only_mobile">Кол-во часов</p>
+            <p>{{ project.time}}</p>
+        </div>
         <div class="edit_buttons">
             <span @click="onDelete">Удалить</span>
         </div>
@@ -50,42 +62,14 @@
         align-items: center;
         justify-content: space-between;
 
-        .user {
-            display: flex;
-            align-items: center;
-
-            p {
-                font-weight: bold;
-                opacity: .8;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-
-            .icon {
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                margin-right: 5px;
-                background: red;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #ffffff;
-                font-weight: bold;
-                font-size: 10px;
-
-            }
-        }
-
         .edit_buttons {
-            opacity: 0;
             display: flex;
             align-items: center;
+            @media (min-width: 981px) {
+                opacity: 0;
+            }
 
             * {
-                margin-left: 10px;
                 font-size: 11px;
                 font-weight: bold;
                 color: inherit;
@@ -106,5 +90,4 @@
             }
         }
     }
-
 </style>

@@ -45,7 +45,6 @@
                 Поле обязательно для заполнения
             </div>
         </div>
-
         <div class="form_buttons">
             <button :disabled="submitStatus === 'PENDING'" class="main_button" type="submit">
                 <span v-if="submitStatus === ''">Добавить</span>
@@ -157,13 +156,30 @@
         grid-template-columns: repeat(auto-fill, 219px);
         grid-row-gap: 40px;
         grid-column-gap: 20px;
+        @media (max-width: 530px) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+            .input {
+                grid-column: 1/1 !important;
+            }
+        }
     }
 
     .form_buttons {
         display: flex;
         align-items: center;
-        grid-row: 2;
         grid-column: 1/4;
+        @media (max-width: 530px) {
+            grid-template-columns: 155px 1fr;
+            grid-column: 1/1;
+            display: grid;
+            grid-row-gap: 20px;
+            grid-column-gap: 10px;
+            .time {
+                grid-row: 1;
+                grid-column: 1/3;
+            }
+        }
 
         button {
             min-width: 155px;
@@ -173,5 +189,4 @@
             margin-right: 10px;
         }
     }
-
 </style>

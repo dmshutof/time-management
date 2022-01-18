@@ -55,6 +55,9 @@
 <style lang="scss" scoped>
     .table {
         margin-top: 100px;
+        @media (max-width: 530px) {
+            margin-top: 50px;
+        }
     }
 
     .user_page {

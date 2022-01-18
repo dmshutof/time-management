@@ -222,5 +222,30 @@ textarea.main_input {
     }
 
   }
+}
 
+.only_mobile {
+  font-weight: bold;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 531px) {
+  .only_mobile {
+    display: none;
+
+  }
+}
+
+@media(max-width: 530px) {
+  .vdatetime-popup {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  .column_description {
+    display: none;
+  }
+  .table_columns {
+    grid-template-columns: 1fr
+  }
 }
