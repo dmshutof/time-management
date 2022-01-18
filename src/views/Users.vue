@@ -1,9 +1,9 @@
 <template>
     <Table :all-users="AllUsers">
         <template v-slot:form>
-            <UserForm :all-users="AllUsers" ></UserForm>
+            <UserForm :all-users="AllUsers"></UserForm>
         </template>
-        <template v-slot:tableString="user" >
+        <template v-slot:tableString="user">
             <TableString :user="user.user"></TableString>
         </template>
     </Table>

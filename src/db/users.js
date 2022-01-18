@@ -1,4 +1,4 @@
-export default[
+export default [
     {
         "id": "61e0261ca54aa47658070efc",
         "name": "Tyson ",
@@ -194,7 +194,7 @@ export default[
         ]
     },
     {
-        "id": "61e0261c36ee7355880a67e3" ,
+        "id": "61e0261c36ee7355880a67e3",
         "name": "Cain ",
         "surname": "Singleton",
         "patronymic": "Ashlee",

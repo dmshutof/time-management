@@ -65,7 +65,6 @@
     import {Datetime} from 'vue-datetime'
     import 'vue-datetime/dist/vue-datetime.css'
 
-
     export default {
         name: "ProjectForm",
         props: {
@@ -140,7 +139,6 @@
                         }, 1000)
                     }, 3000)
                 }
-
             },
             formCancel() {
                 this.$store.commit('ShowUserFormSwitcher', {isShow: false, type: 'ADD'})

@@ -12,12 +12,12 @@
         <Table :all-users="User.projects">
             <template v-slot:addButtonName>Добавить отчет</template>
             <template v-slot:tableHeader>
-                   <div class="column_description table_columns">
-                       <p>Описание</p>
-                       <p>Дата начала</p>
-                       <p>Дата окончания</p>
-                       <p>Кол-во часов</p>
-                   </div>
+                <div class="column_description table_columns">
+                    <p>Описание</p>
+                    <p>Дата начала</p>
+                    <p>Дата окончания</p>
+                    <p>Кол-во часов</p>
+                </div>
             </template>
             <template v-slot:form>
                 <ProjectForm :all-users="User.projects"></ProjectForm>

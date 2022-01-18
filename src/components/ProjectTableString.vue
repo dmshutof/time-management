@@ -32,7 +32,7 @@
         },
         methods: {
             ...mapMutations(['deleteProject']),
-            onDelete(){
+            onDelete() {
                 this.deleteProject({
                     userId: this.$route.params.id,
                     projectId: this.$props.project.id

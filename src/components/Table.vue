@@ -9,7 +9,7 @@
         </div>
         <slot name="tableHeader" v-if="AllUsers.length > 0"></slot>
         <transition-group class="table_body" name="tableString" tag="div">
-            <div :key="user.id" v-for="user of AllUsers" class="table_string_wrapper">
+            <div :key="user.id" class="table_string_wrapper" v-for="user of AllUsers">
                 <slot :user="user" name="tableString"></slot>
             </div>
         </transition-group>
@@ -17,7 +17,6 @@
 </template>
 
 <script>
-
     import {mapGetters} from 'vuex'
 
     export default {
@@ -40,7 +39,8 @@
             padding: 15px 20px;
             border-bottom: 1px solid #d0d6db;
         }
-        &_body{
+
+        &_body {
             position: relative;
         }
 

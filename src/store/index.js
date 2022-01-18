@@ -7,9 +7,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         users: [],
-        oneUser:[],
+        oneUser: [],
         isShowUserForm: {
-            editUserId:null,
+            editUserId: null,
             isShow: false,
             type: 'ADD'
         }
@@ -18,8 +18,8 @@ export default new Vuex.Store({
         updateUsers(state, users) {
             state.users = users
         },
-        ShowUserFormSwitcher(state, obj){
-           state.isShowUserForm = obj
+        ShowUserFormSwitcher(state, obj) {
+            state.isShowUserForm = obj
         },
         createUser(state, newUser) {
             //state.users.unshift(newUser)
@@ -44,7 +44,7 @@ export default new Vuex.Store({
         },
         deleteProject(state, obj) {
             let user = state.users.find((user => user.id === obj.userId)),
-             projectIndex = user.projects.findIndex(project=> project.id === obj.projectId)
+                projectIndex = user.projects.findIndex(project => project.id === obj.projectId)
             user.projects.splice(projectIndex, 1)
         },
     },
@@ -60,10 +60,10 @@ export default new Vuex.Store({
         AllUsers(state) {
             return state.users
         },
-        User(state){
+        User(state) {
             return state.oneUser
         },
-        UserForm(state){
+        UserForm(state) {
             return state.isShowUserForm
         }
     }

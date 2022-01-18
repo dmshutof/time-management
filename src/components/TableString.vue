@@ -26,7 +26,6 @@
             onDelete() {
                 this.deleteUser(this.$props.user.id)
             }
-
         }
     }
 </script>
@@ -95,5 +94,4 @@
             }
         }
     }
-
 </style>

@@ -6,6 +6,7 @@
 
 <script>
     import './css/styles.scss'
+
     export default {
         created() {
             this.$store.dispatch('getUsers')

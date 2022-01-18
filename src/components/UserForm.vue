@@ -2,7 +2,7 @@
     <form @submit.prevent="submit">
         <div class="input">
             <label for="email">Введите Email<sup>*</sup></label>
-            <input :class="{'error': $v.email.$error}" id="email" placeholder="Email" type="text" class="main_input"
+            <input :class="{'error': $v.email.$error}" class="main_input" id="email" placeholder="Email" type="text"
                    v-model.trim="$v.email.$model">
             <div class="input_description" v-if="$v.email.$dirty && !$v.email.required">Поле обязательно для
                 заполнения
@@ -11,23 +11,24 @@
             <div class="input_description" v-if="!$v.email.unique">Пользователь с таким Email уже существует</div>
         </div>
         <div class="input">
-            <label for="name">Введите Имя<sup>*</sup></label>
-            <input :class="{'error': $v.name.$error}" id="name" placeholder="Имя" type="text" class="main_input"
-                   v-model.trim="$v.name.$model">
-            <div class="input_description" v-if="$v.name.$dirty && !$v.name.required">Поле обязательно для заполнения
-            </div>
-        </div>
-        <div class="input">
             <label for="surname">Введите Фамилию<sup>*</sup></label>
-            <input :class="{'error': $v.surname.$error}" id="surname" placeholder="Фамилия" type="text" class="main_input"
+            <input :class="{'error': $v.surname.$error}" class="main_input" id="surname" placeholder="Фамилия"
+                   type="text"
                    v-model.trim="$v.surname.$model">
             <div class="input_description" v-if=" $v.surname.$dirty && !$v.surname.required">Поле обязательно для
                 заполнения
             </div>
         </div>
         <div class="input">
+            <label for="name">Введите Имя<sup>*</sup></label>
+            <input :class="{'error': $v.name.$error}" class="main_input" id="name" placeholder="Имя" type="text"
+                   v-model.trim="$v.name.$model">
+            <div class="input_description" v-if="$v.name.$dirty && !$v.name.required">Поле обязательно для заполнения
+            </div>
+        </div>
+        <div class="input">
             <label for="patronymic">Введите Отчество</label>
-            <input id="patronymic" placeholder="Отчество" type="text" v-model.trim="patronymic" class="main_input">
+            <input class="main_input" id="patronymic" placeholder="Отчество" type="text" v-model.trim="patronymic">
         </div>
         <div class="form_buttons">
             <button :disabled="submitStatus === 'PENDING'" class="main_button" type="submit">
@@ -41,8 +42,6 @@
             </button>
             <div @click="formCancel" class="main_button gray_theme">Отмена</div>
         </div>
-
-
     </form>
 </template>
 
@@ -137,7 +136,6 @@
                         }, 1000)
                     }, 3000)
                 }
-
             },
             formCancel() {
                 this.name = ''
@@ -165,6 +163,7 @@
 
         button {
             min-width: 155px;
+
             &:not(:last-child) {
                 margin-right: 10px;
             }
