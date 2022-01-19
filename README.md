@@ -1,24 +1,13 @@
-# time-managment
-
-## Project setup
+# Тестовое задание vue, vuex, vue-router
+Ссылка на сайт: [time-management](https://github.com/dmshutof/time-management).
+## Установка проекта
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Компиляция и хотрелоад
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
