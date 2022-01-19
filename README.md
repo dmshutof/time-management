@@ -1,5 +1,5 @@
 # Тестовое задание vue, vuex, vue-router
-Ссылка на сайт: [time-management](https://github.com/dmshutof/time-management).
+Ссылка на сайт: [time-management](https://dmshutof.github.io/time-management/).
 ## Установка проекта
 ```
 npm install
